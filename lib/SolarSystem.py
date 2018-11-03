@@ -63,11 +63,11 @@ class SolarSystem(avango.script.Script):
         self.sun.get_orbit_node().Children.value.append(self.sun_light)
 
         ## TODO: init planets and moons below here
-        	
+
         self.mercury = SolarObject(
             NAME = "mercury",
             TEXTURE_PATH = SP.MERCURY_TEXTURE,
-            PARENT_NODE = self.sun.get_orbit_node(),
+            PARENT_NODE = PARENT_NODE,
             SF_TIME_SCALE = self.sf_time_scale_factor,
             DIAMETER = SP.MERCURY_DIAMETER,
             ORBIT_RADIUS = SP.MERCURY_ORBIT_RADIUS,
@@ -76,7 +76,6 @@ class SolarSystem(avango.script.Script):
             ROTATION_INCLINATION = SP.MERCURY_ROTATION_INCLINATION,
             ROTATION_DURATION = SP.MERCURY_ROTATION_DURATION,
             )
-        #self.mercury.orbit_vis()
 
         self.venus = SolarObject(
             NAME = "venus",
@@ -89,11 +88,11 @@ class SolarSystem(avango.script.Script):
             ORBIT_DURATION = SP.VENUS_ORBIT_DURATION,
             ROTATION_INCLINATION = SP.VENUS_ROTATION_INCLINATION,
             ROTATION_DURATION = SP.VENUS_ROTATION_DURATION,
-            )
+            )        	
 
         self.earth = SolarObject(
             NAME = "earth",
-            TEXTURE_PATH = SP.EARTH_TEXTURE,
+            TEXTURE_PATH = SP.EARTH_TEXTURE,            
             PARENT_NODE = PARENT_NODE,
             SF_TIME_SCALE = self.sf_time_scale_factor,
             DIAMETER = SP.EARTH_DIAMETER,
@@ -103,7 +102,7 @@ class SolarSystem(avango.script.Script):
             ROTATION_INCLINATION = SP.EARTH_ROTATION_INCLINATION,
             ROTATION_DURATION = SP.EARTH_ROTATION_DURATION,
             )
-
+        
         self.earth_moon = SolarObject(
             NAME = "moon",
             TEXTURE_PATH = SP.EARTH_MOON_TEXTURE,
@@ -220,7 +219,6 @@ class SolarSystem(avango.script.Script):
             ROTATION_INCLINATION = SP.NEPTUNE_ROTATION_INCLINATION,
             ROTATION_DURATION = SP.NEPTUNE_ROTATION_DURATION,
             )
-
 
 	
 
